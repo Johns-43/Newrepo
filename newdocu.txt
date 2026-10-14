@@ -1,0 +1,6 @@
+The issue is that your git revert encountered a conflict, and Git is currently in the REVERTING state. Your git push --force did not fix it because the revert has not been completed.
+You tried to revert commit 688bb66, which added welcome.txt. Git reports that the file was modified in your current branch, so it cannot automatically remove it.
+Step 1: Decide what you want to do
+If your goal is to undo commit 688bb66 while preserving the other commits, follow these steps.
+Step 2: Resolve the conflict
+Your terminal says welcome.txt was deleted in the reverting change but modified in HEAD
