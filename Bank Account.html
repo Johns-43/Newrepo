@@ -1,0 +1,65 @@
+<script>
+
+class BankAccount
+{
+	constructor(accountNumber,accountHolder,balance)
+	{
+
+		this.accountNumber = accountNumber;
+		this.accountHolder = accountHolder;
+		this.balance = balance;
+	}
+
+deposit()
+{
+let d = Number(prompt("Enter the Amount to Deposit"));
+this.balance=this.balance+d;
+document.write("Amount "+d+" is deposited <br/>");
+}
+
+withdraw()
+{
+let w = Number(prompt("Enter the Amount to Withdraw"));
+if(w<=this.balance)
+{
+this.balance=this.balance-w;
+document.write("Amount "+w+" is withdrawn <br/>");
+}
+else
+{
+document.write("Insufficient balance <br/>");
+}
+}
+
+displayBalance()
+{
+document.write("Current Balance : "+this.balance+"<br/>");
+}
+}
+
+let customer1 = new BankAccount("1234567890","Roy",10000);
+
+let ch = Number(prompt("Welcome to Banking Enter your Choice 1.Deposit 2.Withrdraw 3.Display Balance 0.exit"));
+
+while(ch!=0)
+{
+if(ch==1)
+{
+customer1.deposit();
+}
+else if(ch==2)
+{
+customer1.withdraw();
+}
+else if(ch==3)
+{
+customer1.displayBalance();
+}
+else
+{
+document.write("Invalid Choice");
+}
+ch = Number(prompt("Enter your Choice 1.Deposit 2.Withrdraw 3.Display Balance 0.exit"));
+}
+
+</script>
