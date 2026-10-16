@@ -1,2 +1,2 @@
 hello friends
-don't commit
+please commit
